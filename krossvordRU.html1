@@ -1,157 +1,37 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>Новогодний кроссворд</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f8ff;
-      margin: 20px;
-      text-align: center;
-    }
-
-    h1 {
-      color: #d42e12;
-    }
-
-    .crossword {
-      display: inline-block;
-      margin: 20px auto;
-    }
-
-    .crossword table {
-      border-collapse: collapse;
-    }
-
-    .crossword td {
-      width: 30px;
-      height: 30px;
-      border: 1px solid #333;
-      text-align: center;
-      vertical-align: middle;
-      font-weight: bold;
-      font-size: 14px;
-      background-color: #fff;
-    }
-
-    .black {
-      background-color: #000;
-    }
-
-    .number {
-      position: relative;
-      top: -10px;
-      left: -10px;
-      font-size: 8px;
-      color: red;
-      float: left;
-    }
-
-    .clues {
-      display: inline-block;
-      vertical-align: top;
-      margin-left: 40px;
-      text-align: left;
-    }
-
-    .clues h2 {
-      color: #2e8b57;
-    }
-
-    .clues ol {
-      margin-left: 20px;
-    }
-
-    .clues li {
-      margin-bottom: 8px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой блог</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        .date {
+            font-size: 1.2em;
+            margin-top: 20px;
+            color: #7f8c8d;
+        }
+    </style>
 </head>
 <body>
-  <h1>🎄 Новогодний кроссворд 🎁</h1>
+    <h1>Мой блог</h1>
+    <div class="date" id="current-date"></div>
 
-  <div class="crossword">
-    <table>
-      <!-- Строка 1 -->
-      <tr>
-        <td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td><span class="number">1</span>С</td><td>Н</td><td>Е</td><td>Г</td><td>У</td><td>Р</td><td>О</td><td>Ч</td><td>К</td><td>А</td>
-      </tr>
-      <!-- Строка 2 -->
-      <tr>
-        <td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td><span class="number">2</span>Н</td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td>
-      </tr>
-      <!-- Строка 3 -->
-      <tr>
-        <td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td>Е</td><td class="black"></td><td><span class="number">3</span>Д</td><td>Е</td><td>Д</td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td>
-      </tr>
-      <!-- Строка 4 -->
-      <tr>
-        <td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td>Г</td><td class="black"></td><td>М</td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td>
-      </tr>
-      <!-- Строка 5 -->
-      <tr>
-        <td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td>О</td><td class="black"></td><td>О</td><td class="black"></td><td>В</td><td>И</td><td>Н</td><td>О</td><td class="black"></td><td class="black"></td>
-      </tr>
-      <!-- Строка 6 -->
-      <tr>
-        <td class="black"></td><td class="black"></td><td class="black"></td><td><span class="number">4</span>С</td><td>Н</td><td>Е</td><td>Ж</td><td>И</td><td>Н</td><td>К</td><td>И</td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td>
-      </tr>
-      <!-- Строка 7 -->
-      <tr>
-        <td><span class="number">5</span>Е</td><td>Л</td><td>К</td><td>А</td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td>Р</td><td class="black"></td><td class="black"></td><td class="black"></td><td><span class="number">6</span>О</td><td>Л</td><td>И</td><td>В</td>
-      </tr>
-      <!-- Строка 8 -->
-      <tr>
-        <td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td>О</td><td class="black"></td><td class="black"></td><td class="black"></td><td>Ь</td><td class="black"></td><td class="black"></td><td class="black"></td>
-      </tr>
-      <!-- Строка 9 -->
-      <tr>
-        <td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td><span class="number">7</span>М</td><td>А</td><td>Н</td><td>Д</td><td>А</td><td>Р</td><td>И</td><td>Н</td><td>Ы</td><td class="black"></td>
-      </tr>
-      <!-- Строка 10 -->
-      <tr>
-        <td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td>
-      </tr>
-      <!-- Строка 11 -->
-      <tr>
-        <td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td><span class="number">8</span>К</td><td>У</td><td>Л</td><td>Е</td><td>К</td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td>
-      </tr>
-      <!-- Строка 12 -->
-      <tr>
-        <td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td>
-      </tr>
-      <!-- Строка 13 -->
-      <tr>
-        <td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td><span class="number">9</span>П</td><td>О</td><td>Д</td><td>А</td><td>Р</td><td>К</td><td>И</td><td class="black"></td><td class="black"></td><td class="black"></td>
-      </tr>
-      <!-- Строка 14 -->
-      <tr>
-        <td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td>
-      </tr>
-    </table>
-  </div>
-
-  <div class="clues">
-    <h2>Вопросы</h2>
-    <h3>По горизонтали:</h3>
-    <ol>
-      <li>Внучка Деда Мороза</li>
-      <li>Новогодний символ из снега</li>
-      <li>Главный зимний волшебник</li>
-      <li>Маленькие зимние фигурки на окнах</li>
-      <li>Главное новогоднее дерево</li>
-      <li>Праздничное блюдо из овощей</li>
-    </ol>
-
-    <h3>По вертикали:</h3>
-    <ol start="7">
-      <li>Цитрусовый фрукт — символ Нового года</li>
-      <li>Конус из бумаги для сладостей</li>
-      <li>То, что ждёшь под ёлкой</li>
-    </ol>
-  </div>
-
-  <p><i>Слова: снегурочка, снеговик, дед мороз, снежинки, елка, вино, оливье, мандарины, кулек, подарки</i></p>
+    <script>
+        // Получаем сегодняшнюю дату
+        const now = new Date();
+        const options = { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' };
+        const dateString = now.toLocaleDateString('ru-RU', options);
+        document.getElementById('current-date').textContent = dateString;
+    </script>
 </body>
 </html>
