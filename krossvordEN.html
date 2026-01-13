@@ -1,64 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
+     <!DOCTYPE html>
+<html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Christmas Crossword</title>
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      background: linear-gradient(to bottom, #e0f7fa, #b3e5fc);
-      text-align: center;
-      padding: 20px;
-      color: #01579b;
-    }
+    <meta charset="UTF-8">
+    <title>Структура моего доменного имени</title>
+</head>
+<body>
+    <h1>Из чего состоит доменное имя моего сайта</h1>
+    <p><strong>Дата:</strong> 13 января 2026 г.</p>
+    <p><strong>Мой сайт:</strong> <a href="https://aaaeee365.github.io/dem.github.io/">https://aaaeee365.github.io/dem.github.io/</a></p>
 
-    h1 {
-      color: #d50000;
-      font-size: 28px;
-      margin-bottom: 20px;
-    }
+    <h2>Настоящее доменное имя (hostname):</h2>
+    <code>aaaeee365.github.io</code>
 
-    .crossword-container {
-      display: inline-block;
-      margin: 20px auto;
-    }
+    <h2>Уровни иерархии DNS:</h2>
+    <ul>
+        <li><strong>Корневой домен (Root):</strong> <code>.</code> (скрыт)</li>
+        <li><strong>Домен верхнего уровня (TLD):</strong> <code>.io</code></li>
+        <li><strong>Домен второго уровня (SLD):</strong> <code>github</code></li>
+        <li><strong>Поддомен (третьего уровня):</strong> <code>aaaeee365</code></li>
+    </ul>
 
-    .crossword {
-      border-collapse: collapse;
-      margin: 0 auto;
-    }
-
-    .crossword td {
-      width: 40px;
-      height: 40px;
-      border: 2px solid #01579b;
-      text-align: center;
-      vertical-align: middle;
-      font-weight: bold;
-      font-size: 18px;
-      background-color: white;
-      position: relative;
-    }
-
-    .black {
-      background-color: #000;
-    }
-
-    .number {
-      position: absolute;
-      top: 2px;
-      left: 2px;
-      font-size: 10px;
-      color: red;
-      font-weight: bold;
-    }
-
-    .clues {
-      margin-top: 30px;
-      text-align: left;
-      display: inline-block;
-      background: #ffffff;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(
+    <p>Часть <code>/dem.github.io/</code> — это не домен, а путь к файлу или папке на сайте.</p>
+    <p>Такая структура типична для сайтов, созданных с помощью GitHub Pages.</p>
+</body>
+</html>
